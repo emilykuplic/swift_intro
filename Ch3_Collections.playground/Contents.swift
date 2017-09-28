@@ -77,4 +77,30 @@ enum PlayerState_Basic {
 }
 
 var basicState = PlayerState_Basic.Alive
+basicState.hashValue
+
+//Raw values
+enum PlayerState_RawValues: Int {
+    case Alive = 1, KO, Unknown
+}
+
+var rawValueEnum = PlayerState_RawValues.KO
+rawValueEnum.hashValue
+rawValueEnum.rawValue
+
+var rawIntializedState = PlayerState_RawValues
+(rawValue: 3)
+
+//Associated Values - API router examples done with enums and associate values
+enum PlayerState_AssocaitedValues {
+    case Alive
+    case KO(restartLevel: Int)
+    case Unknown(debug: String)
+}
+
+var associatedStateEnum =
+    PlayerState_AssocaitedValues.KO(restartLevel: 1)
+
+
+
 
