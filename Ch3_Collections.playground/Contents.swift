@@ -88,18 +88,17 @@ var rawValueEnum = PlayerState_RawValues.KO
 rawValueEnum.hashValue
 rawValueEnum.rawValue
 
-var rawIntializedState = PlayerState_RawValues
-(rawValue: 3)
+var rawIntializedState = PlayerState_RawValues(rawValue: 3)
 
 //Associated Values - API router examples done with enums and associate values
-enum PlayerState_AssocaitedValues {
+enum PlayerState_AssociatedValues {
     case Alive
     case KO(restartLevel: Int)
     case Unknown(debug: String)
 }
 
 var associatedStateEnum =
-    PlayerState_AssocaitedValues.KO(restartLevel: 1)
+    PlayerState_AssociatedValues.KO(restartLevel: 1)
 
 
 
